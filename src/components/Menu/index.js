@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Search from "./Search";
 
 const StyledMenu = styled.header`
   display: flex;
@@ -24,12 +25,13 @@ const StyledMenu = styled.header`
   }
 `;
 
-export default function Menu() {
+export default function Menu({ filtro, setFiltro }) {
   return (
     <StyledMenu>
       <div>
         <Logo />
       </div>
+      <Search filtro={filtro} setFiltro={setFiltro} />
     </StyledMenu>
   );
 }
